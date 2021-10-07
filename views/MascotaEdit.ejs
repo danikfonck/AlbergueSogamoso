@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <%- include('./templates/header') %>
+</head>
+<body onload="cargarEditado()" style="background-color:rgba(246, 185, 86, 0.938) ;">
+<div class="container" style="background-color: rgb(240, 198, 120);">
+    <div class="card" style="background-color: rgb(240, 162, 106);">
+        <div class="card-header" style="background-color: rgb(240, 162, 106);">
+          <%- include('./templates/navbarRegresoAdmin') %>
+
+        </div>
+        <div  class="card-body" style="background-color: rgb(240, 162, 106); padding: 5em;">
+            <div class="row" style="background-color: rgb(240, 162, 106);">
+                <h3>Crud de Mascotas</h3>
+            </div>
+
+            <form class="row g-3" style="background-color: rgb(240, 162, 106);" id="editarMascota">
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">id</label>
+                    <input type="text" class="form-control" id="id">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Tipo</label>
+                    <input name="tipoCambio" type="text" class="form-control" id="tipo">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre">
+                  </div>
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Edad</label>
+                    <input type="text" class="form-control" id="edad">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Genero</label>
+                    <input type="text" class="form-control" id="genero">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Descripción</label>
+                    <input type="text" class="form-control" id="descripcion">
+                  </div>
+                <div class="col-12">
+                  <button type="submit" id="agregar" onclick="editarMascota()" class="btn btn-success" value="">Cargar</button>
+                  <button type="submit" id="guadar" onclick="nuevaMascota()" class="btn btn-primary" value="">Guadar</button>
+
+                </div>
+              </form>
+            
+              
+        </div>
+    </div>
+</div>
+
+<%- include('./templates/footer') %>
+</body>
+</html>

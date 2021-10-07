@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang='es'>
+    <head>
+        <%- include('./templates/header')%>
+    </head>
+    <body onload="mostrarMascotas()" style="background-color: rgba(248, 142, 20, 0.897);">
+        <div class="container" style="background-color: rgb(255, 255, 255);">
+            <div class="card">
+                <div class="card-header" style="background-color: rgba(233, 157, 71, 0.897);">
+                    <%- include('./templates/navbar')%>
+                </div>
+                
+                <h3 style="padding: 1rem; font-family: cursive; " >Busca tu mascota</h3>
+                <div class="container-sm">
+                  <div class="row">
+                    <table class="table ">
+                      <thead>
+                        <th>Tipo</th>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Genero</th>
+                        <th>Descripcion</th>
+                        <th>Adoptar</th>
+                      </thead>
+                      <tbody id="tbody"></tbody>
+                    </table>
+                </div>
+                </div>
+
+              
+                  <div class=".container-lg">
+
+                  <div class="card border-light mb-3 " style="max-width: 18rem; float: right; padding: 1rem;">
+                    <div class="card-header">Madeleine Daniela Fonseca Bernal</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Light card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+
+                  <div class="card border-light mb-3" style="max-width: 18rem;  padding: 1em;">
+                    <div class="card-header">Santiago Rodriguez Caceres</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Light card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+
+                  
+
+                </div>
+
+               <!-- <%- include('./templates/arregloEstu')%><!-->
+
+         
+            </div>
+        </div>
+        <%- include('./templates/footer')%>
+    </body>
+</html>

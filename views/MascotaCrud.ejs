@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <%- include('./templates/header') %>
+</head>
+<body onload="cargarMascotas() , listaMascotas(),cargarEliminados()" style="background-color:rgba(246, 185, 86, 0.938) ;">
+<div class="container" style="background-color: rgb(240, 198, 120);">
+    <div class="card" style="background-color: rgb(240, 162, 106);">
+        <div class="card-header" style="background-color: rgb(240, 162, 106);">
+          <%- include('./templates/navbarRegresoAdmin') %>
+
+        </div>
+        <div  class="card-body" style="background-color: rgb(240, 162, 106); padding: 5em;">
+            <div class="row" style="background-color: rgb(240, 162, 106);">
+                <h3>Crud de Mascotas</h3>
+            </div>
+
+            <form class="row g-3" style="background-color: rgb(240, 162, 106);" id="nuevaMascota">
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">id</label>
+                    <input type="text" class="form-control" id="id">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Tipo</label>
+                    <input type="text" class="form-control" id="tipo">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre">
+                  </div>
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Edad</label>
+                    <input type="text" class="form-control" id="edad">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Genero</label>
+                    <input type="text" class="form-control" id="genero">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Descripción</label>
+                    <input type="text" class="form-control" id="descripcion">
+                  </div>
+                <div class="col-12">
+                  <button type="submit" id="agregar" class="btn btn-primary" value="">Cargar</button>
+                  <a class="btn btn-success" href="/MascotaEdit" role="button">Editar</a>                </div>
+              </form>
+              <form class="row g-3" style="background-color: rgb(240, 162, 106);" id="eliminado">
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">id a eliminar</label>
+                    <input type="text" class="form-control" id="idEliminado">
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" id="eliminar" class="btn btn-danger" value="">Eliminar</button>
+                  </div>
+                </form>
+              <div class="row" style="padding-top: 1em;">
+                <table class="table table-bordered border-dark"  >
+                  <thead >
+                    <th>Id</th>
+                    <th>Tipo</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Genero</th>
+                    <th>Descripcion</th>
+                  </thead>
+                  <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('./templates/footer') %>
+</body>
+</html>

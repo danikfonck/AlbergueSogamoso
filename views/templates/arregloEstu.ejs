@@ -1,0 +1,31 @@
+<div class="card-body">
+    <%if(personas.length){%>
+        <table class="table bm-2">
+            <thead>
+                <th>Cédula</th>
+                <th>Apellidos</th>
+                <th>Nombres</th>
+                <th>Mascota</th>
+                <th>Teléfono</th>
+                <th>Correo</th>
+                <th>Género</th>
+            </thead>
+            <tbody>
+                <% personas.forEach(persona => { %>
+                    <tr>
+                        <td><%= persona.code %></td>
+                        <td><%= persona.lastName %></td>
+                        <td><%= persona.name %></td>
+                        <td><%= persona.city %></td>
+                        <td><%= persona.phone %></td>
+                        <td><%= persona.email %></td>
+                        <td><%= persona.genAux %></td>
+                    </tr>
+                <%})%>
+            </tbody>
+        </table>
+    <%}else{%>
+        <h5>No hay Registros</h5>
+    <%}%>
+    <!--<a class="btn btn-primary" href="/insert" role="button">Nuevo Registro</a>!-->
+  </div>
